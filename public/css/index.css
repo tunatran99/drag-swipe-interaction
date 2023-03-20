@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "GothamRounded-Light";
+    src: url("../fonts/GothamRounded-Light.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "GothamRounded-Med";
+    src: url("../fonts/GothamRounded-Medium.otf") format("truetype");
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+    font-family: "GothamRounded-Light";
+}
+
+.phone-frames {
+    background-image: url("../images/phone_14_01.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    width: 20vw;
+    height: 80%;
+    display: flex;
+    flex-flow: column;
+}
+
+.phone-frames img {
+    margin: 0 auto;
+    margin-top: 3.5rem;
+}
+
+.images-list {
+    width: 82%;
+    height: 65%;
+    margin-top: .8rem;
+    margin-left: 1.3rem;
+    padding: 0 .2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    display: flex;
+    left: 0;
+    flex-flow: column;
+    border-radius: 10px;
+    transition: transform .3s linear;
+    position: absolute;
+}
+
+.image img {
+    width: 17vw;
+    height: 51vh;
+    border-radius: 10px;
+    margin-top: 0;
+    object-fit: cover;
+}
+
+.information {
+    margin-top: auto;
+    width: fit-content;
+    position: absolute;
+    bottom: .3rem;
+    left: .5rem;
+    color: white;
+}
+
+.information h3 {
+    font-size: 20pt;
+    font-family: "GothamRounded-Med";
+}
+
+.information h3 span {
+    font-family: "GothamRounded-Light";
+    font-size: 14pt;
+}
+
+.information h3,
+.information p {
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+.information p {
+    font-size: 11pt;
+}
+
+.interact-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .5rem;
+}
+
+.interact-btns button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 10px 2px rgb(230, 228, 228);
+    background-color: white;
+    cursor: pointer;
+}
+
+.interact-btns button:nth-child(2) {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 .9rem;
+}
+
+.interact-btns button div {
+    height: 2rem;
+    background-size: 350% 250%;
+}
+
+.dislike div {
+    background-image: url("../images/button.jpg");
+    background-position: 41px -4.5px;
+}
+
+.bookmark div {
+    height: 1.5rem !important;
+    background-image: url("../images/button.jpg");
+    background-position: -34.5px 26.5px;
+    background-size: 400% 250%;
+}
+
+.like div {
+    background-image: url("../images/button.jpg");
+    background-position: 41px 35.5px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: white;
+    }
+
+    .phone-frames {
+        background-image: none;
+        width: 100%;
+    }
+
+    .images-list {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .image {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .image img {
+        width: 100%;
+    }
+}
